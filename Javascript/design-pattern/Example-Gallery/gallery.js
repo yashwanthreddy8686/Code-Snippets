@@ -9,6 +9,7 @@ function Gallery(gallery) {
   let currentImage;
 
   function showModal() {
+    console.log('showing gallery 1');
     if (modal.matches('.open')) {
       console.info('modal already opened');
     }
@@ -54,6 +55,7 @@ function Gallery(gallery) {
     modal.querySelector('h2').textContent = el.title;
     modal.querySelector('figure p').textContent = el.dataset.description;
     currentImage = el;
+    console.log('showing image of gallery 1');
     showModal();
   }
 
@@ -67,6 +69,7 @@ function Gallery(gallery) {
       }
     })
   );
+  console.log('completed');
 }
 
 const gallery1 = Gallery(document.querySelector('.gallery1'));
